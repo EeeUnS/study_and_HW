@@ -1,0 +1,56 @@
+\documentclass{oblivoir}
+    \usepackage{hyperref}
+
+\begin{document}
+\title{simple report}
+\author{이윤승 201712052}
+\maketitle
+\tableofcontents
+\section{Linear Date Structure}
+덱빼곤 아는거니 빠르게 생략
+\begin{itemize}
+    \item  리스트(list): 양방향, 단방향, 
+    \item  스택(stack):LIPO 
+    \item  큐(queue): PIPO
+    \item  덱(deck, deque) : 큐의 형태에서 앞 뒤  push,pop이 둘다 가능
+\end{itemize} 
+
+\section{Nonlinear Date Structure}
+일자로 이루어진 선형 자료구조와는 다르게 일반적인 경우이다.
+\begin{itemize}
+    \item 그래프 : 정점과 간선으로 이루어져있으며 간선에 가중치가 있을수도있고 없을 수도있고 방향이 간선 방향이 있을수도있고 없을수도 있음 생략
+    \item  트리 : 고3때 확통 공부를 하다보면 써보는 수형도이다. 엄연히 그래프의 일종이다. 
+\end{itemize}
+ 
+
+배열 : 생략
+
+연결리스트 : 생략
+
+이진 탐색 트리 : 하나의 정점에 연결된 간선이 두개인 트리
+
+해시테이블 : 어려워서 생략
+
+\section{STL(Standard Template Library)}
+
+\begin{itemize}
+    \item vector : 동적 배열 구현, 배열과같이 메모리가 붙어서 존재한다. 인덱스접근가능
+    \item list : 노드기반 양방향 연결리스트 구현 무조건 순환을해서 탐색을 해야함
+    \item stack : 스택 구현
+    \item queue : 큐 구현
+    \item deque : 덱 구현
+    \item map : 트리,정렬 키와 데이터 같이 저장 키값 중복 삽입 불가능 , 빠른 탐색이 장점, 삭제가 불편함. 
+    구현 그림 참고 : \url{https://blockdmask.tistory.com/87}
+    \item set : 집합, 정렬X 중복데이터 삽입 불가능
+\end{itemize}
+
+\section{c++11에 추가된 표준 라이브러리}
+\begin{itemize}
+    \item array : array를 아예 템플릿 클래스로 만들어서 갖가지 기능을 넣어놓음
+    \item unordered\_map : 정렬되지않은 map
+    \item foward\_list : 단방향 리스트
+    \item unordered\_set : 정렬되지않은 set
+\end{itemize}
+
+
+\end{document}
