@@ -23,8 +23,7 @@ int main()
 		 
 	for (;;)
 	{
-		std::array<char, 128> buf;
-		buf.assign(0);
+		std::array<char, 128> buf = { 0, };
 
 		//error code wrapping class
 		boost::system::error_code error;
@@ -47,7 +46,7 @@ int main()
 		
 		char szMessage[128] = { 0, };
 		sprintf_s(szMessage, 128 - 1, "Re:%s", &buf[0]);
-		int nMsgLen = strnlen_s(szMessage, 128 - 1);
+		std::size_t nMsgLen = strnlen_s(szMessage, 128 - 1);
 
 		boost::system::error_code ignored_error;
 		socket.write_some(boost::asio::buffer(szMessage, nMsgLen), ignored_error);
