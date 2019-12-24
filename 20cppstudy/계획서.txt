@@ -22,6 +22,24 @@ Graph 과제
 
 Cpp 전체적인 개요
 
+스터디 목표.
+1. 구글링 몸에 베기
+2. Cpp 11,14...간단하게 익히기
+3. 객체지향프로그래밍
+
+
+coding standards
+
+https://github.com/popekim/dev-docs-ko/blob/master/coding-standards/cpp.md
+
+Range-Based For
+https://www.youtube.com/watch?v=sVoz36DYK5s&list=PLW_uvsSPlijtSmrhajc3Y02G86lOieQOb
+
+unique_ptr
+https://www.youtube.com/watch?v=MGVSPZoOchE&list=PLW_uvsSPlijtSmrhajc3Y02G86lOieQOb&index=3
+
+nullptr
+https://www.youtube.com/watch?v=Lt8MoQ-Rz-c&list=PLW_uvsSPlijtSmrhajc3Y02G86lOieQOb&index=5
 
 3-3 c++11 random class
 ---------------------------------------------
@@ -33,6 +51,8 @@ week 2. 클래스
 멤버변수 메소드?
 멤버함수
 const 떡칠
+operator 
+
 
 과제: operator+ -가 구현된 biginteger구현
 
@@ -40,6 +60,10 @@ const 떡칠
 week 3. 템플릿 & 템플릿 클래스
 linking #include이해
 3-2
+TMP맛보기
+https://www.youtube.com/watch?v=a6BQphLoTag&feature=youtu.be
+
+https://www.youtube.com/watch?v=o9FXctFYlnY&feature=youtu.be
 
 
 week 4. 상속, 가상함수
@@ -47,6 +71,9 @@ week 4. 상속, 가상함수
 1주차과제
 3-2
 4-2
+
+final override
+https://www.youtube.com/watch?v=JMw0F8FFe80&list=PLW_uvsSPlijtSmrhajc3Y02G86lOieQOb&index=4
 
 
 week 5. 팩토리패턴
