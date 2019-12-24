@@ -1,0 +1,54 @@
+
+Cpp 스터디
+제대로 일정짜서 
+1월~ 2월 생각중
+선수 : C, 포인터 쓸줄알아야함
+내용
+week 1. c -> cpp로 바뀌는것  
+입출력, 파일입출력, free delete etc
+&&
+&&
+for PS
+vector , priorty_queue etc..
+stack, queue , dequeue ...
+Graph 과제
+과제 2-2 vector 연습
+과제 :3-1 sort 연습 
+3-2 범위기반 for문
+4-1
+5-1
+
+
+
+Cpp 전체적인 개요
+
+
+3-3 c++11 random class
+---------------------------------------------
+class
+
+week 2. 클래스
+다형성?
+캡슐화?
+멤버변수 메소드?
+멤버함수
+const 떡칠
+
+과제: operator+ -가 구현된 biginteger구현
+
+
+week 3. 템플릿 & 템플릿 클래스
+linking #include이해
+3-2
+
+
+week 4. 상속, 가상함수
+0주차과제
+1주차과제
+3-2
+4-2
+
+
+week 5. 팩토리패턴
+5-2
+

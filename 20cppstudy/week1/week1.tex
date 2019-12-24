@@ -59,6 +59,7 @@ margin=.5em}]{dfn}
 % \begin{dfn}[]
 % \end{dfn}
 
+\setbeamertemplate{footline}[frame number]
 
 \usetheme{Hannover}
 
@@ -74,12 +75,12 @@ margin=.5em}]{dfn}
 \end{frame}
 
 \section{입출력}
-
+%\text{속도를 위한 흑마법}
 \begin{frame}[fragile]{입출력의 변화}
     \begin{lstlisting}[style = CStyle]
     \include{iostream}
         std::ios_base::sync_with_stdio(false); 
-        std::cin.tie(NULL);//속도를 위한 흑마법
+        std::cin.tie(NULL);//
         std::cout<<" " << ' ' << a << b << c << std::endl << '\n';
         std::cin >> a >> b >> c 
     \end{lstlisting}
@@ -207,35 +208,40 @@ margin=.5em}]{dfn}
 
 
 
-\section{ect}
+ \section{ect}
 
-\begin{frame}
+\begin{frame}[fragile] 
     \frametitle{그 밖의 자주쓰는것}
+    
     \begin{itemize}
         \item sort
         \item priority queue
         \item abs : 절댓값 반환
         \item tuple
         \item pair
-        \item string : $#include <string>$
+        \item string : $\#include <string>$
     \end{itemize}
+    
 \end{frame}
 
 \subsection{sort}
 
 
 \begin{frame}
+    
     \frametitle{Sort}
+
     msvc에선 introsort사용
-    $#include<algorithm>$
+    $\#include<algorithm>$
     \url{https://www.acmicpc.net/blog/view/22}
+
 \end{frame}
 
 \subsection{priority queue}
 
 \begin{frame}{priority queue 우선순위 큐}
     
-    $#include<queue>$
+    $\#include<queue>$
     \url{https://koosaga.com/9}
     
 \end{frame}
@@ -243,7 +249,7 @@ margin=.5em}]{dfn}
 \begin{frame}{pair}
 
     \begin{itemize}
-        \item $#include<utility>$
+        \item $\#include<utility>$
         \item 2개 쌍으로 가지는 자료구조 
         \item $std::pair<type,type>$
         \item .first .second
@@ -254,25 +260,31 @@ margin=.5em}]{dfn}
 \begin{frame}{다른 STL들}
     본인도 아직 안써봄
     \begin{itemize}
-        \item <array> : 배열
-        \item <list> : 양방향 연결리스트
-        \item <forward_list> : 단방향 연결리스트
-        \item <map> : 이진탐색트리 기반 / 자동정렬 / key - value pair로 구성
-        \item <set> : 이진탐색트리 기반 / 자동정렬 / key 만 저장함
-        \item <unordered_map> : 정렬되지않은 map
-        \item <unordered_set> : 정렬되지 않은 set
+        \item array : 배열
+        \item list : 양방향 연결리스트
+        \item forward\_list : 단방향 연결리스트
+        \item map : 이진탐색트리 기반 $/$ 자동정렬 $/$ key, value pair로 구성
+        \item set : 이진탐색트리 기반 $/$ 자동정렬 $/$ key 만 저장함
+        \item unordered\_map : 정렬되지않은 map
+        \item unordered\_set : 정렬되지 않은 set
     \end{itemize}
-    출처: \url{ttps://code-algalon.tistory.com/188}
+
+    출처 : \url{https://code-algalon.tistory.com/188}
+
 \end{frame}
 
-\begin{frame}{Q&A}
+\begin{frame}{Q\&A}
     질문?
 \end{frame}
 
-% \begin{frame}
-    
-% \end{frame}
+\begin{frame}{과제}
+    \begin{itemize}
+        \item 2-2 vector 연습
+        \item 3-1 sort 연습 
+        \item 3-2 범위기반 for문
+        \item 4-1 그래프 표현
+    \end{itemize}
+\end{frame}
+
 
 \end{document}
-
-%

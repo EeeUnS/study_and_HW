@@ -1,7 +1,0 @@
-bus hyundai universe 45
-bus daewoo bx 40
-truck hyundai porter 1
-truck hyundai mighty 2.5
-bus hyundai county 25
-bus kia granbird 45
-truck daewoo novus 4.5
