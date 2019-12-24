@@ -6,20 +6,20 @@
 #include<algorithm>
 #include<fstream>
 
-using namespace std;
+//using namespace std;
 
 class Car
 {
 public:
-	Car(string i_brand, string i_model, int i_price);
+	explicit Car(const std::string i_brand,const  std::string i_model, int i_price);
 	~Car();
-	void SetPrice(const int price); //°¡°İ ÀçÁöÁ¤À» À§ÇÑ  setter ±×·¡¼­ setter°¡¹ºµ¥?
+	void SetPrice(const int price); //ê°€ê²© ì¬ì§€ì •ì„ ìœ„í•œ  setter ê·¸ë˜ì„œ setterê°€ë­”ë°?
 	int GetPrice() const;
-	string GetBrand() const;
-	string GetModel() const;
+	std::string GetBrand() const;
+	std::string GetModel() const;
 private:
-	string brand;
-	string model;
+	std::string brand;
+	std::string model;
 	int price;
 };
 
@@ -28,21 +28,21 @@ private:
 class CarManager
 {
 public:
-	CarManager(const string &Filename);
+	explicit CarManager(const std::string &Filename);
 	~CarManager();
-	void ChangePrice(const string &brand, const string &model,const int price) ; //brand,model ·Î ÀÎ½ºÅÏ½ºÃ£¾Æ¼­ °ªº¯°æ
-	void FindCarInfo(const string &brand, const string &model) const;
-	void Menu()  ;
+	void ChangePrice(const std::string &brand, const std::string &model,const int price) ; //brand,model ë¡œ ì¸ìŠ¤í„´ìŠ¤ì°¾ì•„ì„œ ê°’ë³€ê²½
+	void FindCarInfo(const std::string &brand, const std::string &model) const;
+	void Menu() ;
 	void PrintCarList() const;
 	void SaveChanges() const;
-	void SortCarList(); //ºê·£µå-model ¼øÀ¸·Î Á¤·ÄÇÒ°Í
+	void SortCarList(); //ë¸Œëœë“œ-model ìˆœìœ¼ë¡œ ì •ë ¬í• ê²ƒ
 private:
-	vector<Car> carList;  //Ä«ÀÇ ÀÎ½ºÅÏ½º¸¦ °¡Áö´Â º¤ÅÍ		ÀÎ½ºÅÏ½º°¡ ¹¹Áö?
-	string fileName;
-	int FindCarindex(const string &brand, const string &model) const;
+	std::vector<Car> carList;  //ì¹´ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ì§€ëŠ” ë²¡í„°		ì¸ìŠ¤í„´ìŠ¤ê°€ ë­ì§€?
+	std::string fileName;
+	int FindCarindex(const std::string &brand, const std::string &model) const;
 };
 
-bool SortCmp(Car &a, Car &b);
+bool SortCmp(const Car &a,const  Car &b);
 
 int getNumber();
 

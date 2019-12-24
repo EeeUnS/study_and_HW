@@ -1,10 +1,10 @@
 #include"class.hpp"
 
-Car::Car(string i_brand, string i_model, int i_price) : brand(i_brand), model(i_model), price(i_price) {}
+Car::Car(const std::string i_brand, const  std::string i_model, int i_price) : brand(i_brand), model(i_model), price(i_price) {}
 
 Car::~Car() {}
 
-void Car::SetPrice(const int price) //°¡°Ý ÀçÁöÁ¤À» À§ÇÑ  setter ±×·¡¼­ setter°¡¹ºµ¥?
+void Car::SetPrice(const int price) //ê°€ê²© ìž¬ì§€ì •ì„ ìœ„í•œ  setter ê·¸ëž˜ì„œ setterê°€ë­”ë°?
 {
 	this->price = price;
 }
@@ -14,29 +14,29 @@ int Car::GetPrice() const
 {
 	return price;
 }
-string Car::GetBrand() const
+std::string Car::GetBrand() const
 {
 	return brand;
 }
 
-string Car::GetModel() const
+std::string Car::GetModel() const
 {
 	return model;
 }
 
 
-CarManager::CarManager(const string &Filename) : fileName(Filename)
+CarManager::CarManager(const std::string &Filename) : fileName(Filename)
 {
 	try {
-		ifstream in_file(Filename); // ¿¹¿ÜÃ³¸®
+		std::ifstream in_file(Filename); // ì˜ˆì™¸ì²˜ë¦¬
 
-		if (in_file.fail())//ÆÄÀÏ¾øÀ»¶§ true¹ÝÈ¯
+		if (in_file.fail())//íŒŒì¼ì—†ì„ë•Œ trueë°˜í™˜
 		{
 			throw fileName;
 		}
-		string i_model, i_brand;
+		std::string i_model, i_brand;
 		int i_price;
-		while (!(in_file.eof())) //ÆÄÀÏÀÌ Á¤»óÀûÀÎ °æ¿ì¿¡...
+		while (!(in_file.eof())) //íŒŒì¼ì´ ì •ìƒì ì¸ ê²½ìš°ì—...
 		{
 			in_file >> i_brand;
 			in_file >> i_model;
@@ -48,9 +48,9 @@ CarManager::CarManager(const string &Filename) : fileName(Filename)
 		}
 		in_file.close();
 	}
-	catch (string Filename)
+	catch (std::string Filename)
 	{
-		cout << " ÆÄÀÏ " << Filename << "ÀÌ Á¸ÀçÇÏÁö ¾Ê°Å³ª ¿Ã¹Ù¸¥ Çü½ÄÀÌ ¾Æ´Õ´Ï´Ù.." << endl;
+		std::cout << " íŒŒì¼ " << Filename << "ì´ ì¡´ìž¬í•˜ì§€ ì•Šê±°ë‚˜ ì˜¬ë°”ë¥¸ í˜•ì‹ì´ ì•„ë‹™ë‹ˆë‹¤.." << std::endl;
 	}
 }
 
@@ -58,27 +58,27 @@ CarManager::~CarManager()
 {
 }
 
-void CarManager::ChangePrice(const string &brand, const string &model, const int price) //brand,model ·Î ÀÎ½ºÅÏ½ºÃ£¾Æ¼­ °ªº¯°æ
+void CarManager::ChangePrice(const std::string &brand, const std::string &model, const int price) //brand,model ë¡œ ì¸ìŠ¤í„´ìŠ¤ì°¾ì•„ì„œ ê°’ë³€ê²½
 {
 	int i = FindCarindex(brand, model);
 	if (i == -1)
 	{
-		cout << "ÇØ´ç ºê·£µå, ¸ðµ¨ÀÌ ¸®½ºÆ®¿¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù." << endl;
+		std::cout << "í•´ë‹¹ ë¸Œëžœë“œ, ëª¨ë¸ì´ ë¦¬ìŠ¤íŠ¸ì— ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." << std::endl;
 		return;
 	}
 	carList.at(i).SetPrice(price);
 
 }
 
-void CarManager::FindCarInfo(const string &brand, const string &model) const
+void CarManager::FindCarInfo(const std::string &brand, const std::string &model) const
 {
 	int i = FindCarindex(brand, model);
 	if (i == -1)
 	{
-		cout << "ÇØ´ç ºê·£µå, ¸ðµ¨ÀÌ ¸®½ºÆ®¿¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù." << endl;
+		std::cout << "í•´ë‹¹ ë¸Œëžœë“œ, ëª¨ë¸ì´ ë¦¬ìŠ¤íŠ¸ì— ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." << std::endl;
 		return;
 	}
-	cout << "ºê·£µå : " << carList.at(i).GetBrand() << "¸ðµ¨ : " << carList.at(i).GetModel() << " °¡°Ý : " << carList.at(i).GetPrice() << endl;
+	std::cout << "ë¸Œëžœë“œ : " << carList.at(i).GetBrand() << "ëª¨ë¸ : " << carList.at(i).GetModel() << " ê°€ê²© : " << carList.at(i).GetPrice() << std::endl;
 }
 
 void CarManager::Menu()  {
@@ -91,41 +91,41 @@ void CarManager::Menu()  {
 	};
 	while (true) {
 		int sel;
-		cout << "Car Manager Menu" << endl;
-		cout << "1. Print Car List" << endl;
-		cout << "2. Find Car Info" << endl;
-		cout << "3. Change Price" << endl;
-		cout << "4. Sort Car List" << endl;
-		cout << "5. Save Changes" << endl;
-		cout << "6. exit" << endl;
-		cout << "Input : ";
+		std::cout << "Car Manager Menu" << std::endl;
+		std::cout << "1. Print Car List" << std::endl;
+		std::cout << "2. Find Car Info" << std::endl;
+		std::cout << "3. Change Price" << std::endl;
+		std::cout << "4. Sort Car List" << std::endl;
+		std::cout << "5. Save Changes" << std::endl;
+		std::cout << "6. exit" << std::endl;
+		std::cout << "Input : ";
 
 		sel = getNumber();
 
-		string brand, model;
+		std::string brand, model;
 		int price;
 		switch (sel)
 		{
 		case printCarList:
-			cout << endl;
+			std::cout << std::endl;
 			PrintCarList();
 			break;
 		case findCarInfo:
-			cout << "Brand : ";
-			cin >> brand;
-			cout << "Model : ";
-			cin >> model;
-			cout << endl;
+			std::cout << "Brand : ";
+			std::cin >> brand;
+			std::cout << "Model : ";
+			std::cin >> model;
+			std::cout << std::endl;
 			FindCarInfo(brand, model);
 			break;
-		case changePrice:      // price ¿¡ aa ³ÖÀ»½Ã¿¡ ¹«ÇÑ¹Ýº¹ ¿¡·¯
-			cout << "Brand : ";
-			cin >> brand;
-			cout << "Model : ";
-			cin >> model;
-			cout << "Price : ";
+		case changePrice:      // price ì— aa ë„£ì„ì‹œì— ë¬´í•œë°˜ë³µ ì—ëŸ¬
+			std::cout << "Brand : ";
+			std::cin >> brand;
+			std::cout << "Model : ";
+			std::cin >> model;
+			std::cout << "Price : ";
 			price = getNumber();
-			cout << endl;
+			std::cout << std::endl;
 			ChangePrice(brand, model, price);
 			break;
 		case sortCarList:
@@ -137,11 +137,11 @@ void CarManager::Menu()  {
 		case 6:
 			exit(0);
 		default:
-			cout << "Input Val Error" << endl;
+			std::cout << "Input Val Error" << std::endl;
 			break;
 		}
-		cout << endl << endl;
-		cin.clear();
+		std::cout << std::endl << std::endl;
+		std::cin.clear();
 		sel = 0;
 	}
 }
@@ -151,19 +151,19 @@ void CarManager::PrintCarList()  const
 	int n = carList.size();
 	for (int i = 0; i < n; i++)
 	{
-		cout << "ºê·£µå : " << carList.at(i).GetBrand() << "¸ðµ¨ : " << carList.at(i).GetModel() << " °¡°Ý : " << carList.at(i).GetPrice() << endl;
+		std::cout << "ë¸Œëžœë“œ : " << carList.at(i).GetBrand() << "ëª¨ë¸ : " << carList.at(i).GetModel() << " ê°€ê²© : " << carList.at(i).GetPrice() << std::endl;
 	}
 }
 
 void CarManager::SaveChanges() const
 {
-	ofstream out_file(fileName);
+	std::ofstream out_file(fileName);
 	int n = carList.size();
 	for (int i = 0; i < n; i++)
 	{
 		out_file << carList.at(i).GetBrand() << " ";;
 		out_file << carList.at(i).GetModel() << " ";
-		out_file << carList.at(i).GetPrice() << endl;
+		out_file << carList.at(i).GetPrice() << std::endl;
 	}
 	out_file.close();
 }
@@ -171,10 +171,10 @@ void CarManager::SaveChanges() const
 
 void CarManager::SortCarList()
 {
-	sort(carList.begin(), carList.end(), SortCmp);
+	std::sort(carList.begin(), carList.end(), SortCmp);
 }
 
-bool SortCmp(Car &a, Car &b)
+bool SortCmp(const Car &a,const Car &b)
 {
 	if(a.GetBrand() == b.GetBrand())
 		return a.GetModel() < b.GetModel();
@@ -183,7 +183,7 @@ bool SortCmp(Car &a, Car &b)
 
 
 
-int CarManager::FindCarindex(const string &brand, const string &model) const
+int CarManager::FindCarindex(const std::string &brand, const std::string &model) const
 {
 	int n = carList.size();
 	for (int i = 0; i < n; i++)
@@ -194,18 +194,18 @@ int CarManager::FindCarindex(const string &brand, const string &model) const
 	return -1;
 }
 
-int getNumber() { //±Ü¾î¿È
+int getNumber() { //ê¸ì–´ì˜´
 
 	int retNum;
 
-	cin >> retNum;
+	std::cin >> retNum;
 
-	// Àß¸øµÈ ÀÔ·ÂÀ» ¹Þ¾ÒÀ» °æ¿ì
-	if (cin.fail()) {
-		cout << "Input Val Error" << endl; // ¿¡·¯ ¸Þ½ÃÁö Ãâ·Â
-		cin.clear(); // ¿À·ù½ºÆ®¸²À» ÃÊ±âÈ­
-		cin.ignore(256, '\n'); // ÀÔ·Â¹öÆÛ¸¦ ºñ¿ò
-		return getNumber(); // ÇÔ¼ö¸¦ ÀçÈ£ÃâÇÑ´Ù
+	// ìž˜ëª»ëœ ìž…ë ¥ì„ ë°›ì•˜ì„ ê²½ìš°
+	if (std::cin.fail()) {
+		std::cout << "Input Val Error" << std::endl; // ì—ëŸ¬ ë©”ì‹œì§€ ì¶œë ¥
+		std::cin.clear(); // ì˜¤ë¥˜ìŠ¤íŠ¸ë¦¼ì„ ì´ˆê¸°í™”
+		std::cin.ignore(256, '\n'); // ìž…ë ¥ë²„í¼ë¥¼ ë¹„ì›€
+		return getNumber(); // í•¨ìˆ˜ë¥¼ ìž¬í˜¸ì¶œí•œë‹¤
 	}
 
 	return retNum;
