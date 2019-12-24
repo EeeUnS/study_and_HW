@@ -1,31 +1,31 @@
 
-Cpp ½ºÅÍµğ
-Á¦´ë·Î ÀÏÁ¤Â¥¼­ 
-1¿ù~ 2¿ù »ı°¢Áß
-¼±¼ö : C, Æ÷ÀÎÅÍ ¾µÁÙ¾Ë¾Æ¾ßÇÔ
-³»¿ë
-week 1. c -> cpp·Î ¹Ù²î´Â°Í  
-ÀÔÃâ·Â, ÆÄÀÏÀÔÃâ·Â, free delete etc
+Cpp ìŠ¤í„°ë””
+ì œëŒ€ë¡œ ì¼ì •ì§œì„œ 
+1ì›”~ 2ì›” ìƒê°ì¤‘
+ì„ ìˆ˜ : C, í¬ì¸í„° ì“¸ì¤„ì•Œì•„ì•¼í•¨
+ë‚´ìš©
+week 1. c -> cppë¡œ ë°”ë€ŒëŠ”ê²ƒ  
+ì…ì¶œë ¥, íŒŒì¼ì…ì¶œë ¥, free delete etc
 &&
 &&
 for PS
 vector , priorty_queue etc..
 stack, queue , dequeue ...
-Graph °úÁ¦
-°úÁ¦ 2-2 vector ¿¬½À
-°úÁ¦ :3-1 sort ¿¬½À 
-3-2 ¹üÀ§±â¹İ for¹®
+Graph ê³¼ì œ
+ê³¼ì œ 2-2 vector ì—°ìŠµ
+ê³¼ì œ :3-1 sort ì—°ìŠµ 
+3-2 ë²”ìœ„ê¸°ë°˜ forë¬¸
 4-1
 5-1
 
 
 
-Cpp ÀüÃ¼ÀûÀÎ °³¿ä
+Cpp ì „ì²´ì ì¸ ê°œìš”
 
-½ºÅÍµğ ¸ñÇ¥.
-1. ±¸±Û¸µ ¸ö¿¡ º£±â
-2. Cpp 11,14...°£´ÜÇÏ°Ô ÀÍÈ÷±â
-3. °´Ã¼ÁöÇâÇÁ·Î±×·¡¹Ö
+ìŠ¤í„°ë”” ëª©í‘œ.
+1. êµ¬ê¸€ë§ ëª¸ì— ë² ê¸°
+2. Cpp 11,14...ê°„ë‹¨í•˜ê²Œ ìµíˆê¸°
+3. ê°ì²´ì§€í–¥í”„ë¡œê·¸ë˜ë°
 
 
 coding standards
@@ -45,30 +45,30 @@ https://www.youtube.com/watch?v=Lt8MoQ-Rz-c&list=PLW_uvsSPlijtSmrhajc3Y02G86lOie
 ---------------------------------------------
 class
 
-week 2. Å¬·¡½º
-´ÙÇü¼º?
-Ä¸½¶È­?
-¸â¹öº¯¼ö ¸Ş¼Òµå?
-¸â¹öÇÔ¼ö
-const ¶±Ä¥
+week 2. í´ë˜ìŠ¤
+ë‹¤í˜•ì„±?
+ìº¡ìŠí™”?
+ë©¤ë²„ë³€ìˆ˜ ë©”ì†Œë“œ?
+ë©¤ë²„í•¨ìˆ˜
+const ë–¡ì¹ 
 operator 
 
 
-°úÁ¦: operator+ -°¡ ±¸ÇöµÈ biginteger±¸Çö
+ê³¼ì œ: operator+ -ê°€ êµ¬í˜„ëœ bigintegerêµ¬í˜„
 
 
-week 3. ÅÛÇÃ¸´ & ÅÛÇÃ¸´ Å¬·¡½º
-linking #includeÀÌÇØ
+week 3. í…œí”Œë¦¿ & í…œí”Œë¦¿ í´ë˜ìŠ¤
+linking #includeì´í•´
 3-2
-TMP¸Àº¸±â
+TMPë§›ë³´ê¸°
 https://www.youtube.com/watch?v=a6BQphLoTag&feature=youtu.be
 
 https://www.youtube.com/watch?v=o9FXctFYlnY&feature=youtu.be
 
 
-week 4. »ó¼Ó, °¡»óÇÔ¼ö
-0ÁÖÂ÷°úÁ¦
-1ÁÖÂ÷°úÁ¦
+week 4. ìƒì†, ê°€ìƒí•¨ìˆ˜
+0ì£¼ì°¨ê³¼ì œ
+1ì£¼ì°¨ê³¼ì œ
 3-2
 4-2
 
@@ -76,6 +76,6 @@ final override
 https://www.youtube.com/watch?v=JMw0F8FFe80&list=PLW_uvsSPlijtSmrhajc3Y02G86lOieQOb&index=4
 
 
-week 5. ÆÑÅä¸®ÆĞÅÏ
+week 5. íŒ©í† ë¦¬íŒ¨í„´
 5-2
 
