@@ -1,4 +1,4 @@
-
+﻿
 Cpp 스터디
 제대로 일정짜서 
 1월~ 2월 생각중
@@ -41,7 +41,10 @@ https://www.youtube.com/watch?v=MGVSPZoOchE&list=PLW_uvsSPlijtSmrhajc3Y02G86lOie
 nullptr
 https://www.youtube.com/watch?v=Lt8MoQ-Rz-c&list=PLW_uvsSPlijtSmrhajc3Y02G86lOieQOb&index=5
 
-3-3 c++11 random class
+3-3 c++11 random class 사용해보기
+
+call by ref
+
 ---------------------------------------------
 class
 
@@ -52,13 +55,13 @@ week 2. 클래스
 멤버함수
 const 떡칠
 operator 
-
-
 과제: operator+ -가 구현된 biginteger구현
 
 
+
 week 3. 템플릿 & 템플릿 클래스
-linking #include이해
+link 
+#include이해
 3-2
 TMP맛보기
 https://www.youtube.com/watch?v=a6BQphLoTag&feature=youtu.be
