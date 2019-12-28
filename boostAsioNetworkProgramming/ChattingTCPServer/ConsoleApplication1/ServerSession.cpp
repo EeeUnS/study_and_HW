@@ -99,7 +99,7 @@ void Session::handle_receive(const boost::system::error_code& error, size_t byte
 	{
 		memcpy(&m_PacketBuffer[m_nPacketBufferMark], m_ReceiveBuffer.data(), bytes_transferred);
 
-		int nPacketData = m_nPacketBufferMark + bytes_transferred;
+		int nPacketData = m_nPacketBufferMark + (int)bytes_transferred;
 		int nReadData = 0;
 
 		while (nPacketData > 0)
